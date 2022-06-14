@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+	<h1>Home page</h1>
+	<h3><span th:text="${message}" /></h3>
+	
+	<form action="#" th:action="@{/login}" method="POST" th:object="${user}">
+		<label for="username" >Username: </label>
+		<input type="text" name="username" id="username"  field="*{username}"/><br>
+		<label for="captcha" >Captcha: </label>
+		<input type="text" name="captcha" id="captcha"  field="*{captcha}"/><br>
+		<label for="capchaImg">Capcha</label>
+		<img th:src="@{/captcha}" src="https://picsum.photos/300/200"/><br>
+		<input type="submit" value="Submit" >
+	</form>
+	
+</form>
+</body>
+</html>
